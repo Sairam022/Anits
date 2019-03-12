@@ -1,0 +1,308 @@
+<?php
+session_start();
+$b=mysql_connect("localhost","root","") or die("ksajdflk");
+echo "connected";
+//mysql_query("create database sem_project") ;
+echo"database created ";
+mysql_select_db("sem_project") or die("not selected");
+
+//mysql_query("CREATE TABLE login(Administrator_name varchar(35),password varchar(20),Category varchar(30))") or die(" nttootot2");
+
+$batch1=$_SESSION['batch1'];
+$year1=$_SESSION['year1'];
+$sem1=$_SESSION['sem1'];
+$ACCODOMIC_YEAR=$_POST['ayear'];
+$roll_number=$_POST['rollnumber'];
+$section=$_POST['section'];
+$sub1=$_POST['sub1'];
+$sub2=$_POST['sub2'];
+$sub3=$_POST['sub3'];
+$sub4=$_POST['sub4'];
+$sub5=$_POST['sub5'];
+$sub6=$_POST['sub6'];
+$sub7=$_POST['sub7'];
+$sub8=$_POST['sub8'];
+$sgpa=$_POST['sgpa'];
+$cgpa=$_POST['cgpa'];
+$month_of_pass=$_POST['date'];
+$attendence=$_POST['attendence'];
+$dbuid="";
+$check=0;
+$detained="N";
+if($attendence<=65)
+	{
+		$detained="Y";	
+	}
+$num_of_attempts=1;
+if($year1=="2" && $sem1=="1")
+{
+
+$query= mysql_query("SELECT * FROM 2_1_table ") ;
+	$numrows=mysql_num_rows($query);
+	if($numrows!=0)
+	{
+		while($row=mysql_fetch_assoc($query))
+		{
+			$dbuid= $row['ROLL_NUMBER'];
+			if($dbuid==$roll_number)
+			{
+				$check=1;
+			}	
+		}
+if($check!=1)
+{
+mysql_query("INSERT INTO 2_1_table VALUES('$batch1','$ACCODOMIC_YEAR','$roll_number','$section','$sub1','$sub2','$sub3','$sub4','$sub5','$sub6','$sub7','$sub8',$sgpa,'$cgpa','$month_of_pass',$attendence,$num_of_attempts,'$detained')") or die("120120");
+?>
+		<script>
+		alert("DATA INSERTED");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}
+else
+{
+?>
+		<script>
+		alert("YOUR DATA EXIST");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}	
+}
+else
+{
+?>
+		<script>
+		alert("No DATA EXIST");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}	
+
+}
+else if($year1=="2" && $sem1=="2")
+{
+
+$query= mysql_query("SELECT * FROM 2_2_table  ") ;
+	$numrows=mysql_num_rows($query);
+	if($numrows!=0)
+	{
+		while($row=mysql_fetch_assoc($query))
+		{
+			$dbuid= $row['ROLL_NUMBER'];
+			if($dbuid==$roll_number)
+			{
+				$check=1;
+			}	
+		}
+if($check!=1)
+{
+	mysql_query("INSERT INTO 2_2_table VALUES('$batch1','$ACCODOMIC_YEAR','$roll_number','$section','$sub1','$sub2','$sub3','$sub4','$sub5','$sub6','$sub7','$sub8',$sgpa,'$cgpa','$month_of_pass',$attendence,$num_of_attempts,'$detained')") or die("120120");
+?>
+		<script>
+		alert("DATA INSERTED");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}
+else
+{
+?>
+		<script>
+		alert("YOUR DATA EXIST");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}	
+}
+else
+{
+?>
+		<script>
+		alert("NO DATA EXIST");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}	
+
+}
+else if($year1=="1" && $sem1=="1")
+{
+
+$query= mysql_query("SELECT * FROM 1_1_table  ") ;
+	$numrows=mysql_num_rows($query);
+	if($numrows!=0)
+	{
+		while($row=mysql_fetch_assoc($query))
+		{
+			$dbuid= $row['ROLL_NUMBER'];
+				if($dbuid==$roll_number)
+				{
+					$check=1;
+				}	
+		}
+if($check!=1)
+{
+ mysql_query("INSERT INTO 1_1_table VALUES('$batch1','$ACCODOMIC_YEAR','$roll_number','$section','$sub1','$sub2','$sub3','$sub4','$sub5','$sub6','$sub7','$sub8',$sgpa,'$cgpa','$month_of_pass',$attendence,$num_of_attempts,'$detained')") or die("120120");
+?>
+		<script>
+		alert("DATA INSERTED");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}
+else
+{
+?>
+		<script>
+		alert("YOUR DATA EXIST");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}	
+}
+else
+{	
+?>
+		<script>
+		alert("NO DATA EXIST");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}	
+
+}
+
+else if($year1=="1" && $sem1=="2")
+{
+
+$query= mysql_query("SELECT * FROM 1_2_table  ") ;
+	$numrows=mysql_num_rows($query);
+	if($numrows!=0)
+	{
+		while($row=mysql_fetch_assoc($query))
+		{
+			$dbuid= $row['ROLL_NUMBER'];
+			if($dbuid==$roll_number)
+			{
+				$check=1;
+			}
+
+		}
+if($check!=1)
+{
+ mysql_query("INSERT INTO 1_2_table VALUES('$batch1','$ACCODOMIC_YEAR','$roll_number','$section','$sub1','$sub2','$sub3','$sub4','$sub5','$sub6','$sub7','$sub8',$sgpa,'$cgpa','$month_of_pass',$attendence,$num_of_attempts,'$detained')") or die("120120");
+?>
+		<script>
+		alert("DATA INSERTED");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}
+else
+{
+?>
+		<script>
+		alert("YOUR DATA EXIST");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}	
+}
+	
+}
+else if($year1=="3" && $sem1=="2")
+{
+
+$query= mysql_query("SELECT * FROM 3_2_table  ") ;
+	$numrows=mysql_num_rows($query);
+	if($numrows!=0)
+	{
+		while($row=mysql_fetch_assoc($query))
+		{
+			$dbuid= $row['ROLL_NUMBER'];
+			if($dbuid==$roll_number)
+			{
+				$check=1;
+			}			
+		}
+if($check!=1)
+{
+ mysql_query("INSERT INTO 3_2_table VALUES('$batch1','$ACCODOMIC_YEAR','$roll_number','$section','$sub1','$sub2','$sub3','$sub4','$sub5','$sub6','$sub7','$sub8',$sgpa,'$cgpa','$month_of_pass',$attendence,$num_of_attempts,'$detained')") or die("120120");
+?>
+		<script>
+		alert("DATA INSERTED");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}
+else
+{
+?>
+		<script>
+		alert("YOUR DATA EXIST");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}	
+}
+else
+{
+?>
+		<script>
+		alert("NO DATA EXIST");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}	
+
+}
+
+else if($year1=="4" && $sem1=="1")
+{
+
+$query= mysql_query("SELECT * FROM 4_1_table  ") ;
+	$numrows=mysql_num_rows($query);
+	if($numrows!=0)
+	{
+		while($row=mysql_fetch_assoc($query))
+		{
+			$dbuid= $row['ROLL_NUMBER'];
+				if($dbuid==$roll_number)
+					{
+						$check=1;
+					}
+			
+		}
+if($check!=1)
+{
+ mysql_query("INSERT INTO 4_1_table VALUES('$batch1','$ACCODOMIC_YEAR','$roll_number','$section','$sub1','$sub2','$sub3','$sub4','$sub5','$sub6','$sub7','$sub8',$sgpa,'$cgpa','$month_of_pass',$attendence,$num_of_attempts,'$detained')") or die("120120");
+?>
+		<script>
+		alert("DATA INSERTED");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}
+else
+{
+?>
+		<script>
+		alert("YOUR DATA EXIST");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}	
+}
+else
+{
+?>
+		<script>
+		alert("NO DATA EXIST");
+		window.location.href="Student_data_to_enter.html";
+		</script>
+<?php	
+}	
+
+}
+?>

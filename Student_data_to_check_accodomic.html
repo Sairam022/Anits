@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<title>ACADEMIC STUDENT DATA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" type="image/jpg" href="images/res.jpg" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">ANITS</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="Admin_Home.html">Home</a></li>
+					<li><a href="List1.html">Student Details</a></li>
+					<li><a href="retrieve_complaints.php">Check Complaints</a></li>
+                    <li><a href="faculty_details_to_update.html">Update Faculty Subject Details</a></li>					
+                    <li><a href="faculty_details_to_delete.html">Delete Faculty Subject Details</a></li>					
+                    <li><a href="Student_data_to_enter.html">Add Student Data</a></li>
+					<li><a href="DELETE_Details.html">Delete Student Data</a></li>
+					<li><a href="main_instructions.html">Upload Student Data File</a></li>
+					<li><a href="Student_data_to_update.html">Update Student Data</a></li>
+                    <li><a href="team.html">About Us</a></li>
+					<li><a href="AdminLogin.html">Logout</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>STUDENT RESULT ANALYSIS</h1>
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<CENTER><font face="Baskerville Old Face" size="+3">STUDENT DATA ACADEMIC YEAR WISE</font>
+						</header><br>
+<form method="POST" action="accodomic_year_graph.php"><center>
+    <font face="times" size="+2">
+        <table border="1px solid" width="50%">
+            <tr> <td>ACADEMIC YEAR</td>
+                 <td><input type="text" placeholder="YYYY-YYYY" required="required" name="ayear" pattern="^2\d{3}-[0-9]{4}" title="Format should be YYYY-YYYY"></td></tr>
+           <tr> <td> YEAR </td>
+                <td> <select name="year" required><option value=""> --SELECT-- </option><option value="1"> 1st YEAR</option><option value="2">2nd YEAR</option><option value="3"> 3rd YEAR </option><option value="4"> 4th YEAR </option></select></td></tr>
+        <tr>    <td> SEM </td>
+                <td>  <select name="sem" required><option value=""> --SELECT-- </option><option value="1"> 1st sem</option><option value="2">2nd sem</option></select></td></tr>
+            <tr> <td> SECTION </td>
+                <td> <select name="section" required><option value=""> --SELECT-- </option><option value="A"> A-SECTION</option><option value="B">B-SECTION</option><option value="C">C-SECTION</option></select></td></tr>
+                </table>
+		<input type=submit value=SUBMIT name=sub>     <input type="reset" value="RESET" name="reset">
+						
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content" style="display: block;text-align: center;">
+					<font face="Baskerville Old Face" size="5px" color="#ffffff">Designed & Developed By 3/4 <b><a href="team.html">DONT STOP</a></b> Team <br /> Department of CSE</font>
+					</div>
+					<div class="copyright">
+					<font face="Baskerville Old Face" size="5px" color="#ffffff"> All Rights Reserved <br />©ANITS 2018-2019</font>
+					</div>
+				</div>
+			</footer>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>STUDENT DATA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">ANITS</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="Admin_Home.html">Home</a></li>
+					<li><a href="List1.html">Student Details</a></li>
+<li><a href="faculty_details_to_update.html">UPDATE Faculty Subject Details</a></li>					
+<li><a href="faculty_details_to_delete.html">DELETE Faculty Subject Details</a></li>					
+
+					<li><a href="Student_data_to_enter.html">Add Student Data</a></li>
+					<li><a href="DELETE_Details.html">Delete Student Data</a></li>
+					<li><a href="main_instructions.html">Upload Student Data File</a></li>
+					<li><a href="Student_data_to_update.html">Update Student Data</a></li>
+					<li><a href="AdminLogin.html">Logout</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>STUDENT RESULT ANALYSIS</h1>
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<CENTER><font face="Baskerville Old Face" size="+3">STUDENT DATA BATCH WISE</font>
+						</header><br>
+
+<form method="POST" action="batch_retrival_graph.php">
+    <center>
+        <font face="Baskerville Old Face" size="+2">
+            <table>
+                <tr> <td> BATCH </td>
+                     <td> <input type="text" placeholder="YYYY-YYYY" required="required" name="batch"> </td></tr>
+                <tr> <td> YEAR </td>
+                     <td> <select required="required" name="year">
+			<option value=""> --SELECT--</option>
+			<option value="1"> 1st YEAR</option>
+			<option value="2">2nd YEAR</option>
+			<option value="3"> 3rd YEAR </option>
+			<option value="4"> 4th YEAR </option></select> </td></tr>
+                <tr> <td> SEM </td>
+                     <td> <select required="required" name="sem">
+		<option value=""> --SELECT--</option>
+		<option value="1"> 1st sem</option>
+		<option value="2">2nd sem</option></select> </td></tr>
+                </table>
+            <input type=submit value=SUBMIT name=sub>   <input type="reset" value="RESET" name="reset">
+						
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+				<div class="inner">
+					<div class="content">
+					<pre><center><font size=04 color="white">           	©Copyrights ANITS 2018-2019 All Rights Reserved. Designed & Developed By <br>     3/4 "  " TEAM  DEPARTMENT OF CSE</font></center></pre>						
+					</div>
+					<div class="copyright">
+					<font size=06 color="white">ANITS</font>
+					</div>
+				</div>
+			</footer>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
