@@ -84,7 +84,7 @@ echo $check;
 if($check==1)
 {
 $faculty_name1=$_SESSION['user1'];
-mysql_query("INSERT INTO complaints VALUES(null,'$BATCH1','$rollnumber','$SECTION1','$year','$sem','$complaint')") or die("120120");
+$q=$this->mysqli->query("INSERT INTO complaints VALUES(null,'$BATCH1','$rollnumber','$SECTION1','$year','$sem','$complaint')") or die("120120");
 mysql_query("INSERT INTO complaints_status VALUES(null,'$faculty_name1','$BATCH1','$rollnumber','$SECTION1','$year','$sem','$complaint','$status1','$date1')") or die("something went wrong");
 ?>
 		<script>
